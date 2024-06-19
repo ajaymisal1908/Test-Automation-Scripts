@@ -28,11 +28,5 @@ pipeline {
             junit '**/test-reports/*.xml'
             archiveArtifacts artifacts: '**/screenshots/*.png', allowEmptyArchive: true
         }
-        success {
-            slackSend channel: '#test-results', message: 'All tests passed!'
-        }
-        failure {
-            slackSend channel: '#test-results', message: 'Some tests failed. Check the Jenkins job for details.'
-        }
     }
 }
