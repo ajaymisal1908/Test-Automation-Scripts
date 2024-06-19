@@ -22,8 +22,7 @@ options.add_argument('--window-size=1920,1080')
 
 # Initialize the Chrome driver
 service = ChromeService(executable_path=ChromeDriverManager().install())
-#driver = webdriver.Chrome(service=service, options=options)
-driver = webdriver.Chrome(service=service)
+driver = webdriver.Chrome(service=service, options=options)
 
 # Dictionary to hold time taken for each step
 timing = {}
