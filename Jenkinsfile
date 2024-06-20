@@ -22,11 +22,4 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            junit '**/test-reports/*.xml'
-            archiveArtifacts artifacts: '**/screenshots/*.png', allowEmptyArchive: true
-        }
-    }
 }
