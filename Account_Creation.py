@@ -10,9 +10,9 @@ import json
 
 # Replace these with your Salesforce login details
 login_url = 'https://login.salesforce.com/'
-username = 'epic.76f61717008971194@orgfarm.th'
-password = 'Zaq1@wsx'
-account_name = 'Demo Account 123'
+username = 'misalajay2@brave-panda-pbh9ck.com'
+password = 'pbh9ck@1'
+account_name = 'Test Account 4'
 
 # Initialize the WebDriver with headless option (Chrome in this case)
 options = webdriver.ChromeOptions()
@@ -61,7 +61,7 @@ try:
 
     start_time = time.time()
     # Go to the Accounts tab
-    driver.get("https://dhn000002irfrma4-dev-ed.develop.lightning.force.com/lightning/o/Account/list?filterName=Recent")
+    driver.get("https://brave-panda-pbh9ck-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/list?filterName=00B5g00000nXdU8EAK")
     log_time('Open Account Module', start_time)
 
     start_time = time.time()
