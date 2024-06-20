@@ -8,10 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                retry(3) {
                 git branch: 'main', url: 'https://github.com/ajaymisal1908/Test-Automation-Scripts.git'
-            
-                }
             }
         }
         stage('Build') {
