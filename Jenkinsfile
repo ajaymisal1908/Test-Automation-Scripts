@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/ajaymisal1908/Test-Automation-Scripts.git'
+                git clone 'https://github.com/ajaymisal1908/Test-Automation-Scripts.git'
             }
         }
         stage('Build') {
