@@ -12,7 +12,7 @@ import json
 login_url = 'https://login.salesforce.com/'
 username = 'misalajay2@brave-panda-pbh9ck.com'
 password = 'pbh9ck@1'
-account_name = 'Test Account 4'
+account_name = 'Test Account 7'
 
 # Initialize the WebDriver with headless option (Chrome in this case)
 options = webdriver.ChromeOptions()
