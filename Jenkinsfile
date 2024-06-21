@@ -1,25 +1,38 @@
 pipeline {
     agent any
 
-    environment {
-        CHROME_DRIVER = "C:/Users/Ajay Ambadas Misal/.wdm/drivers/chromedriver/win64/126.0.6478.62/chromedriver-win32/chromedriver.exe"
-    }
-
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/ajaymisal1908/Test-Automation-Scripts.git'
+                git url: 'https://github.com/ajaymisal1908/Test-Automation-Scripts.git'
             }
         }
-        stage('Build') {
+
+        stage('Install Dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                // Command to install dependencies, if any
+                // For example, if you have a requirements.txt for Python
+                bat 'C:\\Users\\Ajay Ambadas Misal\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m pip install -r requirements.txt'
             }
         }
-        stage('Test') {
+
+        stage('Run Python Script') {
             steps {
-                sh 'pytest Account_Creation.py'
+                bat 'C:\\Users\\Ajay Ambadas Misal\\AppData\\Local\\Programs\\Python\\Python312\\python.exe Account_Creation.py'
             }
+        }
+    }
+
+    post {
+        always {
+            echo 'Cleaning up...'
+            cleanWs()
+        }
+        success {
+            echo 'Build succeeded!'
+        }
+        failure {
+            echo 'Build failed!'
         }
     }
 }
